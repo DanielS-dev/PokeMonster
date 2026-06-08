@@ -12,3 +12,5 @@ config.lua
 *.pdb
 *.rar
 /vc17/.vs
+.vs
+vc17/theforgo.A10F9657/
