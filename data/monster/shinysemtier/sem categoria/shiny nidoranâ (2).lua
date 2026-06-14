@@ -1,12 +1,12 @@
 
-local mType = Game.createMonsterType("Nidoran♀")
+local mType = Game.createMonsterType("Nidoran♂")
 local pokemon = {}
 pokemon.eventFile = false -- will try to load the file example.lua in data/scripts/pokemons/events
 pokemon.eventFile = "default" -- will try to load the file test.lua in data/scripts/pokemons/events
-pokemon.description = "a Nidoran♀"
+pokemon.description = "a Nidoran♂"
 pokemon.experience = 1
 pokemon.outfit = {
-    lookType = 29
+    lookType = 32
 }
 
 pokemon.health = 5000
@@ -21,7 +21,7 @@ pokemon.changeTarget = {
     interval = 4*1000,
     chance = 20
 }
-chance = 150000, maxCount = 1},
+chance = 150000, maxCount = 1,
     attackable = true,
     summonable = true,
     passive = false,

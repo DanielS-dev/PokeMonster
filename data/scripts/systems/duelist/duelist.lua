@@ -1,39 +1,39 @@
 DUELISTS_VOICES = {
     startDuelVoices = {
-        "Você está condenado!",
+        "Vocï¿½ estï¿½ condenado!",
         "Prepare-se para a batalha!",
-        "Este será o seu fim!",
-        "Você não tem chance contra mim!",
-        "Vamos ver do que você é capaz!",
-        "Seu destino está selado!",
-        "Vou esmagar você!",
-        "Nenhum de nós sairá ileso!",
-        "Sua derrota é certa!",
+        "Este serï¿½ o seu fim!",
+        "Vocï¿½ nï¿½o tem chance contra mim!",
+        "Vamos ver do que vocï¿½ ï¿½ capaz!",
+        "Seu destino estï¿½ selado!",
+        "Vou esmagar vocï¿½!",
+        "Nenhum de nï¿½s sairï¿½ ileso!",
+        "Sua derrota ï¿½ certa!",
         "Enfrente o seu pior pesadelo!"
     },
     deathDuelVoices = {
-        "Você me venceu, mas não a guerra!",
-        "Isso não acabou... eu voltarei!",
-        "Hoje você venceu, mas eu me vingarei!",
-        "A vitória é sua, por enquanto!",
-        "Este é apenas um revés temporário!",
-        "Você pode ter ganho a batalha, mas não a guerra!",
-        "Minha derrota não será em vão!",
+        "Vocï¿½ me venceu, mas nï¿½o a guerra!",
+        "Isso nï¿½o acabou... eu voltarei!",
+        "Hoje vocï¿½ venceu, mas eu me vingarei!",
+        "A vitï¿½ria ï¿½ sua, por enquanto!",
+        "Este ï¿½ apenas um revï¿½s temporï¿½rio!",
+        "Vocï¿½ pode ter ganho a batalha, mas nï¿½o a guerra!",
+        "Minha derrota nï¿½o serï¿½ em vï¿½o!",
         "Lembre-se, um dia eu retornarei mais forte!",
-        "Você teve sorte desta vez!",
-        "Minha queda será sua ruína!"
+        "Vocï¿½ teve sorte desta vez!",
+        "Minha queda serï¿½ sua ruï¿½na!"
     },
     fleeingVoices = {
-        "Você ainda não me venceu!",
-        "Preciso recuar, mas não acabou!",
+        "Vocï¿½ ainda nï¿½o me venceu!",
+        "Preciso recuar, mas nï¿½o acabou!",
         "Vou me reagrupando, espere por mim!",
-        "Isso não está indo bem, preciso sair daqui!",
-        "Retirada estratégica!",
-        "Você teve sorte, mas eu voltarei!",
-        "Vou me preparar melhor para nossa próxima batalha!",
-        "Isso não é o fim, apenas um recuo temporário!",
+        "Isso nï¿½o estï¿½ indo bem, preciso sair daqui!",
+        "Retirada estratï¿½gica!",
+        "Vocï¿½ teve sorte, mas eu voltarei!",
+        "Vou me preparar melhor para nossa prï¿½xima batalha!",
+        "Isso nï¿½o ï¿½ o fim, apenas um recuo temporï¿½rio!",
         "Eu voltarei mais forte!",
-        "Não pense que isso acabou!"
+        "Nï¿½o pense que isso acabou!"
     },
 }
 
@@ -276,7 +276,7 @@ function eventLoot.onDeath(duelist, corpse, killer, mostDamageKiller, lastHitUnj
 
         local msgEvent = ""
         if ACTIVE_ZONE_EVENT and ACTIVE_ZONE_TYPE == "loot" and ACTIVE_ZONE_EVENT_ID == zoneId then
-            msgEvent = " [Bônus Zone " .. ACTIVE_ZONE_EVENT_RATE_LOOT .. "x]"
+            msgEvent = " [Bï¿½nus Zone " .. ACTIVE_ZONE_EVENT_RATE_LOOT .. "x]"
         end
 
         local luckMsg = "[ LUCKY BONUS ]"
@@ -301,7 +301,7 @@ function eventLoot.onDeath(duelist, corpse, killer, mostDamageKiller, lastHitUnj
                 if player:getStorageValue(i) == item:getId() then
                     if not item:moveTo(player) then
                         player:sendTextMessage(MESSAGE_EVENT_ADVANCE,
-                            "Você não tem capacidade, então o loot foi deixado no corpo.")
+                            "Vocï¿½ nï¿½o tem capacidade, entï¿½o o loot foi deixado no corpo.")
                         break
                     end
                 end
@@ -309,7 +309,7 @@ function eventLoot.onDeath(duelist, corpse, killer, mostDamageKiller, lastHitUnj
         else
             if not item:moveTo(player) then
                 player:sendTextMessage(MESSAGE_EVENT_ADVANCE,
-                    "Você não tem capacidade, então o loot foi deixado no corpo.")
+                    "Vocï¿½ nï¿½o tem capacidade, entï¿½o o loot foi deixado no corpo.")
                 break
             end
         end
@@ -331,7 +331,7 @@ end
 function getDuelistRandomPokemons(duelist, diff)
     local pokemons = {}
     local pokesNumber = math.random(DUELISTS_TYPE[duelist].pokesNumber[1], DUELISTS_TYPE[duelist].pokesNumber[2])
-    local availablePokes = { unpack(DUELISTS_POKEMONS_TYPE[diff]) }
+    local availablePokes = { table.unpack(DUELISTS_POKEMONS_TYPE[diff]) }
 
     for i = 1, pokesNumber do
         if #availablePokes == 0 then
@@ -521,7 +521,7 @@ function Player.startContract(self, id)
     end
 
     if not self:canGetContracts() then
-        self:popupFYI("Você já pegou o máximo de contratos diários.")
+        self:popupFYI("Vocï¿½ jï¿½ pegou o mï¿½ximo de contratos diï¿½rios.")
         return false
     end
     self:startNewContract(id)
@@ -531,22 +531,22 @@ end
 function Player.cancelContract(self, id)
     id = tonumber(id)
     if not id or id ~= id or id > MAX_CONTRACT_DAILY then return false end
-    if not PLAYER_GUID_BH[self:getGuid()] or not PLAYER_GUID_BH_IDS[player:getGuid()] then
-        player:popupFYI("Você não tem contratos ativos.")
+    if not PLAYER_GUID_BH[self:getGuid()] or not PLAYER_GUID_BH_IDS[self:getGuid()] then
+        self:popupFYI("Vocï¿½ nï¿½o tem contratos ativos.")
         return false
     end
-    if not PLAYER_GUID_BH_IDS[player:getGuid()][id] then
-        player:popupFYI("Contrato não encontrado.")
+    if not PLAYER_GUID_BH_IDS[self:getGuid()][id] then
+        self:popupFYI("Contrato nï¿½o encontrado.")
         return false
     end
-    local duelist = Duelist(PLAYER_GUID_BH_IDS[player:getGuid()][id])
+    local duelist = Duelist(PLAYER_GUID_BH_IDS[self:getGuid()][id])
     if duelist then
         duelist:remove()
         PLAYER_GUID_BH_IDS[self:getGuid()][id] = nil
         PLAYER_GUID_BH[self:getGuid()][id].active = false
         return true
     else
-        player:popupFYI("Contrato não encontrado.")
+        self:popupFYI("Contrato nï¿½o encontrado.")
     end
 end
 

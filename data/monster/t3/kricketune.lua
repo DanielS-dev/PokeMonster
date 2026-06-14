@@ -80,11 +80,7 @@ pokemon.moves = {
     {name = "Scratch", power = 7, interval = 10000},
     {name = "Bug Bite", power = 8, interval = 5000},
     {name = "Fury Cutter", power = 9, interval = 10000},
-    {name = "Cutting Blades", power = 10, interval = 10000},
-    {name = "Cutting Blades ", power = 12, interval = 20000},
-    {name = "Cutting Blades ", power = 15, interval = 25000},
     {name = "Bug Buzz", power = 25, interval = 40000},
-    {name = "Agility ", power = 0, interval = 40000},
     {name = "Swords Dance", power = 0, interval = 40000},
     {name = "Bug Buzz", power = 0, interval = 40000},
 

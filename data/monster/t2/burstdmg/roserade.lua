@@ -82,7 +82,6 @@ pokemon.moves = {
     {name = "Razor Leaf", power = 2, interval = 12000},
     {name = "Magical Leaf", power = 2, interval = 15000},
     {name = "Poison Jab", power = 2, interval = 15000},
-    {name = "Synthesis ", power = 8, interval = 80000},
     {name = "Petal Blizzard", power = 28, interval = 50000},
     {name = "Petal Dance", power = 28, interval = 50000},
     {name = "Solar Beam", power = 22, interval = 40000},

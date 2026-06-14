@@ -1,19 +1,10 @@
 
-<<<<<<< Updated upstream:server/data/monster/t1c/disrupter/falta/jynx.lua
 local mType = Game.createMonsterType("Jynx")
 local pokemon = {}
 pokemon.eventFile = false
 pokemon.eventFile = "default" 
 pokemon.description = "a Jynx"
 pokemon.experience = 22752
-=======
-local mType = Game.createMonsterType("Flab�b�")
-local pokemon = {}
-pokemon.eventFile = false
-pokemon.eventFile = "default" 
-pokemon.description = "a Flab�b�"
-pokemon.experience = 243
->>>>>>> Stashed changes:server/data/monster/lua/lvl20/falta/flab#U00e9b#U00e9.txt
 pokemon.outfit = {
     lookType = 841
 }
