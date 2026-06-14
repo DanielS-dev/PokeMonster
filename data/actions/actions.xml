@@ -304,5 +304,5 @@
 <action fromid="7191" toid="7192" script="poke/surf.lua"/>
 <action itemid="7194" script="poke/surf.lua"/>
 <action fromid="7943" toid="7946" script="poke/surf.lua"/>	
-
+<action actionid="1700" script="quests/starter_chests.lua" />
 </actions>

@@ -59,7 +59,7 @@ Se voce usar uma versao Preview ou mais nova do Visual Studio, o vcpkg pode tent
 No terminal `x64 Native Tools Command Prompt for VS 2022`, execute:
 
 ```bat
-cd C:\Users\NGXBRASIL\Downloads\PokeMonster
+cd C:\Users\USER\Downloads\PokeMonster
 C:\vcpkg\vcpkg install --triplet x64-windows
 ```
 
@@ -91,7 +91,7 @@ Para Visual Studio Community:
 
 ```bat
 set VCPKG_VISUAL_STUDIO_PATH=C:\Program Files\Microsoft Visual Studio\2022\Community
-cd C:\Users\NGXBRASIL\Downloads\PokeMonster
+cd C:\Users\USER\Downloads\PokeMonster
 C:\vcpkg\vcpkg install --triplet x64-windows
 ```
 
@@ -99,7 +99,7 @@ Para Build Tools:
 
 ```bat
 set VCPKG_VISUAL_STUDIO_PATH=C:\Program Files\Microsoft Visual Studio\2022\BuildTools
-cd C:\Users\NGXBRASIL\Downloads\PokeMonster
+cd C:\Users\USER\Downloads\PokeMonster
 C:\vcpkg\vcpkg install --triplet x64-windows
 ```
 
@@ -108,7 +108,7 @@ Se ainda falhar, limpe o pacote quebrado e tente novamente:
 ```bat
 rmdir /s /q C:\vcpkg\buildtrees\boost-system
 rmdir /s /q C:\vcpkg\packages\boost-system_x64-windows
-cd C:\Users\NGXBRASIL\Downloads\PokeMonster
+cd C:\Users\USER\Downloads\PokeMonster
 C:\vcpkg\vcpkg install --triplet x64-windows
 ```
 
@@ -156,7 +156,7 @@ USE `pke`;
 Importe o banco com:
 
 ```bat
-mysql -u root -p < C:\Users\NGXBRASIL\Downloads\PokeMonster\bd.sql
+mysql -u root -p < C:\Users\USER\Downloads\PokeMonster\bd.sql
 ```
 
 Depois crie um usuario para o servidor:
@@ -206,7 +206,7 @@ data\world\map.otbm
 Execute sempre pela raiz do projeto:
 
 ```bat
-cd C:\Users\NGXBRASIL\Downloads\PokeMonster
+cd C:\Users\USER\Downloads\PokeMonster
 theforgottenserver-x64.exe
 ```
 
