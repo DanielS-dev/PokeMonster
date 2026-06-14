@@ -21,7 +21,7 @@ pokemon.changeTarget = {
     interval = 4*1000,
     chance = 20
 }
-chance = 150000, maxCount = 1,
+pokemon.flags = {,
     attackable = true,
     summonable = true,
     passive = false,
